@@ -1,11 +1,8 @@
 #include "Worker.h"
-
-
-//Worker::Worker(string& fileName)
-//	:m_FileName(fileName)
-//{
-//}
-
+#include "MessageHandler.h"
+#include "Constants.h"
+#include"Logger.h"
+#include<iostream>
 
 Worker::~Worker()
 {
@@ -14,12 +11,13 @@ Worker::~Worker()
 
 void Worker::convertToWav()
 {
+	const std::string fileArg = "D:\\Workspace\\GoogleDrive\\VisualStudio\\lame-master\\output\\Release\\" + m_FileName;
 	SHELLEXECUTEINFO data = { 0 };
 	data.cbSize = sizeof(data);
 	data.lpVerb = "open";
-	data.lpFile = "E:\\WorkSpace\\lame-3.100\\output\\Release\\lame.exe";
-	data.lpParameters = "E:\\WorkSpace\\lame-3.100\\output\\Release\\SleepAway.wav";
-	data.nShow = SW_NORMAL;
+	data.lpFile = "D:\\Workspace\\GoogleDrive\\VisualStudio\\lame-master\\output\\Release\\lame.exe";
+	data.lpParameters = fileArg.data();
+	data.nShow = SW_HIDE;
 	data.fMask = SEE_MASK_NOCLOSEPROCESS;
 
 	ShellExecuteEx(&data);   // you should check for an error here
@@ -39,10 +37,14 @@ void Worker::convertToWav()
 
 	DWORD dwCode;
 	GetExitCodeProcess(m_shellInfo.hProcess, &dwCode);  // ERRORLEVEL value
+	std::cout << "Converted file " << m_FileName << endl;
+	std::string logInfo = "Converted file " + m_FileName;
+	LogData(logInfo);
+	MessagePosting::SendNotification(MessageTypes::DONE);
 }
 
-void Worker::setInfo(SHELLEXECUTEINFO info, string arg)
+void Worker::setInfo(std::string filename, string arg)
 {
-	m_shellInfo = std::move(info);
-	m_arg = arg.c_str();
+	m_FileName = filename;
+	m_arg = arg.data();
 }

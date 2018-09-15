@@ -10,7 +10,7 @@ public:
 	Worker() {}
 	~Worker();
 	void convertToWav();
-	void setInfo(SHELLEXECUTEINFO fileName, string arg);
+	void setInfo(std::string fineName, string arg);
 private:
 	string m_FileName;
 	SHELLEXECUTEINFO m_shellInfo;
