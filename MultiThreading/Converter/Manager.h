@@ -13,12 +13,10 @@ public:
 	~Manager();
 
 	void createTasks();
-	SHELLEXECUTEINFO& getShellData(string fileName, unsigned int);
 	void ProcessMessages();
 
 private:
 	DataCollector m_FileReader;
-	vector<thread> m_vWorkerThreads;
 	unsigned int m_CoresAvailable;
 	atomic<unsigned int> m_nActiveThreads;
 	atomic<unsigned int> m_nJobsDone;

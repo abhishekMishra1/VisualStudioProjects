@@ -6,7 +6,9 @@ class Logger
 {
 public:
 	static Logger& getInstance();
-	void logComments(std::string str);
+	void logComments(std::string str, bool lineChange);
+	void logComments(unsigned int val, bool lineChange);
+	void changeLineOnly();
 private:
 	Logger() {}
 	~Logger();
@@ -17,7 +19,17 @@ private:
 	std::once_flag m_fileOpenerFlag;
 };
 
-inline void LogData(std::string str)
+inline void LogData(std::string str, bool lineChange=true)
 {
-	Logger::getInstance().logComments(str);
+	Logger::getInstance().logComments(str, lineChange);
+}
+
+inline void LogData(unsigned int val, bool lineChange=true)
+{
+	Logger::getInstance().logComments(val, lineChange);
+}
+
+inline void LogDataOnlyLineChange()
+{
+	Logger::getInstance().changeLineOnly();
 }

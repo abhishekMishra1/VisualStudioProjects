@@ -7,12 +7,16 @@
 
 Manager::Manager()
 	:m_CoresAvailable(thread::hardware_concurrency())
-	, m_nActiveThreads(m_CoresAvailable)
+	, m_nActiveThreads(0)
 	, m_nJobsDone(0)
 {
 	LogData(__FUNCTION__);
-	m_FileReader.ReadDirectory("D:\\Workspace\\GoogleDrive\\VisualStudio\\lame-master\\output\\Release");
-	m_nTotalJobs = m_FileReader.m_vWavFiles.size();
+	m_FileReader.ReadDirectory(".");
+	m_nTotalJobs = static_cast<unsigned int>(m_FileReader.m_vWavFiles.size());
+	if (m_CoresAvailable > m_nTotalJobs)
+		m_nActiveThreads = m_nTotalJobs;
+	else
+		m_nActiveThreads = m_CoresAvailable;
 }
 
 
@@ -23,38 +27,36 @@ Manager::~Manager()
 void Manager::createTasks()
 {
 	LogData(__FUNCTION__);
-	int limit = m_CoresAvailable;
-	if (m_nActiveThreads < m_CoresAvailable)
-		limit = m_nActiveThreads;
-
-	for (int p = 0; p < limit; ++p)
+	if (m_nTotalJobs != 0)
 	{
-		Worker worker;
-		string fileName = m_FileReader.m_vWavFiles[m_nCounter];
-		auto outputStr = fileName.substr(0, fileName.size() - 3) + "mp3";
-		string argument = " -V0 " + fileName + " " + outputStr;
+		int limit = m_CoresAvailable;
+		if (m_nActiveThreads < m_CoresAvailable)
+			limit = m_nActiveThreads;
 
-		worker.setInfo(fileName, argument);
-		thread t(&Worker::convertToWav, &worker);
-		t.join();
-		m_nCounter++;
-//		m_vWorkerThreads.push_back(move(t));
+		for (int p = 0; p < limit; ++p)
+		{
+			Worker worker;
+			string fileName = m_FileReader.m_vWavFiles[m_nCounter];
+			//auto outputStr = fileName.substr(0, fileName.size() - 3) + "mp3";
+			//string argument = " -V0 " + fileName + " " + outputStr;
+
+			worker.setInfo(fileName, "");
+			thread t(&Worker::convertToWav, &worker);
+			t.join();
+			m_nCounter++;
+		}
 	}
+	else
+	{
+		LogData("Seems no file to process. Either check the current directory or report to the team!");
+		std::cout << "No *.wav file found to process\n";
+		MessagePosting::SendNotification(MessageTypes::STOP_MSG_PROCESSING);
+	}
+
+	if(m_nJobsDone == m_nTotalJobs)
+		MessagePosting::SendNotification(MessageTypes::STOP_MSG_PROCESSING);
 }
 
-SHELLEXECUTEINFO& Manager::getShellData(string fileName, unsigned int fileIndex)
-{
-	SHELLEXECUTEINFO data = {0};
-	data.cbSize = sizeof(data);
-	data.lpVerb = "open";
-	data.lpFile = "D:\\Workspace\\GoogleDrive\\VisualStudio\\lame-master\\output\\Release\\lame.exe";
-	data.lpParameters = m_FileReader.m_vWavFiles[fileIndex].data();
-	data.nShow = SW_NORMAL;
-	data.fMask = SEE_MASK_NOCLOSEPROCESS;
-
-	return data;
-
-}
 
 void Manager::ProcessMessages()
 {

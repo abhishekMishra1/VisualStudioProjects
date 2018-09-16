@@ -11,35 +11,47 @@ Worker::~Worker()
 
 void Worker::convertToWav()
 {
-	const std::string fileArg = "D:\\Workspace\\GoogleDrive\\VisualStudio\\lame-master\\output\\Release\\" + m_FileName;
 	SHELLEXECUTEINFO data = { 0 };
+	std::string file = "\""+m_FileName+"\"";
 	data.cbSize = sizeof(data);
 	data.lpVerb = "open";
-	data.lpFile = "D:\\Workspace\\GoogleDrive\\VisualStudio\\lame-master\\output\\Release\\lame.exe";
-	data.lpParameters = fileArg.data();
+	data.lpFile = "lame.exe";
+	data.lpParameters = m_FileName.data();// file.data();
 	data.nShow = SW_HIDE;
 	data.fMask = SEE_MASK_NOCLOSEPROCESS;
-
+	std::cout << file << std::endl;
 	ShellExecuteEx(&data);   // you should check for an error here
-	//while (TRUE) {
-	//	DWORD nStatus = MsgWaitForMultipleObjects(
-	//		1, &m_shellInfo.hProcess, FALSE,
-	//		INFINITE, QS_ALLINPUT   // drop through on user activity 
-	//	);
-	//	if (nStatus == WAIT_OBJECT_0) {  // done: the program has ended
-	//		break;
-	//	}
-	//	MSG msg;     // else process some messages while waiting...
-	//	while (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE)) {
-	//		DispatchMessage(&msg);
-	//	}
-	//}  // launched process has exited
+	std::cout << "Processed file " << m_FileName << endl;
+	std::string logInfo = "Processed file " + m_FileName;
+	LogData(logInfo);
 
 	DWORD dwCode;
 	GetExitCodeProcess(m_shellInfo.hProcess, &dwCode);  // ERRORLEVEL value
-	std::cout << "Converted file " << m_FileName << endl;
-	std::string logInfo = "Converted file " + m_FileName;
-	LogData(logInfo);
+	if (dwCode == STATUS_PENDING)
+	{
+		std::cout << "Still processing\n";
+	}
+	else
+	{
+		if (dwCode == 0)
+		{
+			std::cout << "Converted file " << m_FileName << endl;
+			std::string logInfo = "Converted file " + m_FileName;
+			LogData(logInfo);
+		}
+		else
+		{
+			//std::cout << "Error while converting file " << m_FileName << endl;
+			//std::string logInfo = "Error while converting file " + m_FileName;
+			//LogData(logInfo);
+			//logInfo.clear();
+			//logInfo.append("Error code is ");
+			//LogData(logInfo, false);
+			//LogData(dwCode, false);
+			//LogDataOnlyLineChange();
+		}
+	}
+	
 	MessagePosting::SendNotification(MessageTypes::DONE);
 }
 

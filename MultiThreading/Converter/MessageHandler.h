@@ -1,6 +1,7 @@
 #pragma once
 #include<queue>
 #include<string>
+#include<mutex>
 
 using namespace std;
 namespace MessagePosting {
@@ -19,12 +20,14 @@ namespace MessagePosting {
 
 		void PushMessage(const string& msg)
 		{
+			std::lock_guard<std::mutex> locker(m_lock);
 			m_MessageQueue.push(msg);
 		}
 
 		string RetrieveMsg()
 		{
 			string message("");
+			std::lock_guard<std::mutex> locker(m_lock);
 			if (m_MessageQueue.size())
 			{
 				message = m_MessageQueue.front();
@@ -40,6 +43,7 @@ namespace MessagePosting {
 
 		static MessageHandler* m_pMessageProcessor;
 		queue<string> m_MessageQueue;
+		std::mutex m_lock;
 	};
 
 
