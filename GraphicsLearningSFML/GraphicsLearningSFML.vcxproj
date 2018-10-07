@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{311F3C43-0B66-411F-8C98-A5A665FB8268}</ProjectGuid>
-    <RootNamespace>Trees</RootNamespace>
+    <ProjectGuid>{39EC70DE-F67A-4192-A5A9-6F538808ADEC}</ProjectGuid>
+    <RootNamespace>GraphicsLearningSFML</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -74,14 +74,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)/SFML32bit/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
-    <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)/SFML32bit/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>flac.lib;freetype.lib;ogg.lib;openal32.lib;sfml-audio.lib;sfml-audio-d.lib;sfml-audio-s.lib;sfml-audio-s-d.lib;sfml-graphics.lib;sfml-graphics-d.lib;sfml-graphics-s.lib;sfml-graphics-s-d.lib;sfml-main.lib;sfml-main-d.lib;sfml-network.lib;sfml-network-d.lib;sfml-network-s.lib;sfml-network-s-d.lib;sfml-system.lib;sfml-system-d.lib;sfml-system-s.lib;sfml-system-s-d.lib;sfml-window.lib;sfml-window-d.lib;sfml-window-s.lib;sfml-window-s-d.lib;vorbis.lib;vorbisenc.lib;vorbisfile.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <SubSystem>Windows</SubSystem>
-    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -89,10 +82,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SolutionDir)/SFML/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)/SFML/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-audio.lib;sfml-audio-d.lib;sfml-audio-s.lib;sfml-audio-s-d.lib;sfml-graphics.lib;sfml-graphics-d.lib;sfml-graphics-s.lib;sfml-graphics-s-d.lib;sfml-main.lib;sfml-main-d.lib;sfml-network.lib;sfml-network-d.lib;sfml-network-s.lib;sfml-network-s-d.lib;sfml-system.lib;sfml-system-d.lib;sfml-system-s.lib;sfml-system-s-d.lib;sfml-window.lib;sfml-window-d.lib;sfml-window-s.lib;sfml-window-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>flac.lib;freetype.lib;ogg.lib;openal32.lib;sfml-audio.lib;sfml-audio-d.lib;sfml-audio-s.lib;sfml-audio-s-d.lib;sfml-graphics.lib;sfml-graphics-d.lib;sfml-graphics-s.lib;sfml-graphics-s-d.lib;sfml-main.lib;sfml-main-d.lib;sfml-network.lib;sfml-network-d.lib;sfml-network-s.lib;sfml-network-s-d.lib;sfml-system.lib;sfml-system-d.lib;sfml-system-s.lib;sfml-system-s-d.lib;sfml-window.lib;sfml-window-d.lib;sfml-window-s.lib;sfml-window-s-d.lib;vorbis.lib;vorbisenc.lib;vorbisfile.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -122,14 +117,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BinarySearchTree.cpp" />
+    <ClCompile Include="NodeLayout.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="WindowLayout.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BinarySearchTree.h" />
-    <ClInclude Include="GameConstants.h" />
-    <ClInclude Include="GenericTree.h" />
-    <ClInclude Include="NodesType.h" />
+    <ClInclude Include="NodeLayout.h" />
+    <ClInclude Include="WindowLayout.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

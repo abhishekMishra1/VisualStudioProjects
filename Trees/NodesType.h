@@ -3,9 +3,9 @@
 //Binary Tree
 struct Node
 {
-	int data = -999;
-	Node* pLeft = nullptr;
-	Node* pRight = nullptr;
+	mutable int data = -999;
+	mutable Node* pLeft = nullptr;
+	mutable Node* pRight = nullptr;
 
 	//Node();
 	// ~Node();

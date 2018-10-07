@@ -13,11 +13,14 @@ public:
 	virtual void Insert(int value);
 	virtual void Insert(std::vector<int>&);
 	virtual void TraverseTree();
+	virtual void GraphicalRepresentationOfTree();
+	int GetLongestValidPath();
 protected:
 	virtual void Insert(Node* pHead, int value);
-	void TraverseTree(Node* pHead);
+	void TraverseTree(const Node* pHead);
+	
 private:
-	Node* m_pHead = new Node;
+	const Node* m_pHead = new Node;
 	bool m_bHeadInitialized = false;
 };
 

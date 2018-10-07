@@ -74,7 +74,7 @@ void BinarySearchTree::TraverseTree()
 	TraverseTree(m_pHead);
 }
 
-void BinarySearchTree::TraverseTree(Node* pHead)
+void BinarySearchTree::TraverseTree(const Node* pHead)
 {
 	if (!pHead)
 		return;
@@ -84,6 +84,17 @@ void BinarySearchTree::TraverseTree(Node* pHead)
 }
 
 void BinarySearchTree::Insert(vector<int>& vInputVals)
+{
+
+}
+
+int BinarySearchTree::GetLongestValidPath()
+{
+
+	return 0;
+}
+
+void BinarySearchTree::GraphicalRepresentationOfTree()
 {
 
 }
