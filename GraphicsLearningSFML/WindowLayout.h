@@ -2,7 +2,7 @@
 #include"NodeLayout.h"
 #include <vector>
 
-namespace GraphicsLayout
+namespace GraphicalTree
 {
 	class WindowLayout
 	{
@@ -13,8 +13,11 @@ namespace GraphicsLayout
 		WindowLayout();
 		~WindowLayout();
 		void update();
+		void RenderShapes();
 	protected:
 		sf::RenderWindow m_window;
-		std::vector<GraphicsNodeLayout::NodeLayout> mvNodes;
+		int m_WindowHeight;
+		int m_WindowBreadth;
+		std::vector<GraphicalTree::NodeLayout> mvNodes;
 	};
 }

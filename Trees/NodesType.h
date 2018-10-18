@@ -25,4 +25,12 @@ struct Node
 //	pLeft = pRight = nullptr;
 //}
 
+template<class Type>
+struct GenericNode
+{
+	mutable Type data;
+	mutable GenericNode* pLeft = nullptr;
+	mutable GenericNode* pRight = nullptr;
+};
+
 #endif

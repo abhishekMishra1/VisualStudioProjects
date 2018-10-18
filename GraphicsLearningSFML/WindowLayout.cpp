@@ -1,11 +1,15 @@
 #include "WindowLayout.h"
+#include "Constants.h"
 #include <iostream>
 using namespace std;
 
-using namespace GraphicsLayout;
+using namespace GraphicalTree;
 WindowLayout::WindowLayout()
 {
-
+	sf::Vector2u vec(WindowHeight, WindowBreadth);
+	m_WindowHeight = WindowHeight;
+	m_WindowBreadth = WindowBreadth;
+	m_window.setSize(vec);
 }
 
 WindowLayout::~WindowLayout()
@@ -53,8 +57,15 @@ void WindowLayout::LaunchGraphicalTree()
 		}
 
 		m_window.clear();
+		RenderShapes();
 		m_window.display();
 	}
+}
+
+void WindowLayout::RenderShapes()
+{
+	int nNodes = mvNodes.size();
+	bool bResizingRequired = (ImgSquareSize*nNodes) > m_WindowHeight;
 }
 
 void WindowLayout::update()

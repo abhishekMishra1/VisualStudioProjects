@@ -1,6 +1,0 @@
-﻿  WindowLayout.cpp
-  NodeLayout.cpp
-c:\users\mishraab\documents\visual studio 2015\projects\trees\graphicslearningsfml\nodelayout.cpp(10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  Generating Code...
-  GraphicsLearningSFML.vcxproj -> C:\Users\mishraab\Documents\Visual Studio 2015\Projects\Trees\x64\Debug\GraphicsLearningSFML.exe
-  GraphicsLearningSFML.vcxproj -> C:\Users\mishraab\Documents\Visual Studio 2015\Projects\Trees\x64\Debug\GraphicsLearningSFML.pdb (Partial PDB)

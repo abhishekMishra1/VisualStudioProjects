@@ -1,6 +1,6 @@
 #include "NodeLayout.h"
 
-using namespace GraphicsNodeLayout;
+using namespace GraphicalTree;
 
 NodeLayout::NodeLayout()
 {
