@@ -1,68 +1,88 @@
 #include "BinarySearchTree.h"
+#include "GameConstants.h"
 #include <iostream>
+#include <string>
 #include "../SFML/include/SFML/Graphics.hpp"
 
 using namespace std;
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(600,400), "Trying SFML");
-	sf::Texture texture;
-	if (!texture.loadFromFile("test.png"))
-	{
-		cout << "Failed to load image from file\n";
-	}
+	//sf::RenderWindow window(sf::VideoMode(600,400), "Trying SFML");
+	//sf::Texture texture;
+	//if (!texture.loadFromFile("test.png"))
+	//{
+	//	cout << "Failed to load image from file\n";
+	//}
 
 
-	sf::Sprite sprite(texture);
+	//sf::Sprite sprite(texture);
 
-	while (window.isOpen())
-	{
-		sf::Event event;
-		while (window.pollEvent(event))
-		{
-			switch (event.type)
-			{
-			case sf::Event::Closed:
-				window.close();
-				break;
-			
-				case sf::Event::Resized:
-				std::cout << "Resized dimensions are WxH : " << event.size.width << "x" << event.size.height << endl;
-				break;
-			
-				case sf::Event::LostFocus:
-					std::cout << "Lost focus\n";
-					break;
+	//while (window.isOpen())
+	//{
+	//	sf::Event event;
+	//	while (window.pollEvent(event))
+	//	{
+	//		switch (event.type)
+	//		{
+	//		case sf::Event::Closed:
+	//			window.close();
+	//			break;
+	//		
+	//			case sf::Event::Resized:
+	//			std::cout << "Resized dimensions are WxH : " << event.size.width << "x" << event.size.height << endl;
+	//			break;
+	//		
+	//			case sf::Event::LostFocus:
+	//				std::cout << "Lost focus\n";
+	//				break;
 
-				case sf::Event::GainedFocus:
-					std::cout << "Gained focus\n";
-					break;
+	//			case sf::Event::GainedFocus:
+	//				std::cout << "Gained focus\n";
+	//				break;
 
-			default:
-				break;
-			}
-		}
+	//		default:
+	//			break;
+	//		}
+	//	}
 
-		window.clear();
-		window.draw(sprite);
-		window.display();
-	}
+	//	window.clear();
+	//	window.draw(sprite);
+	//	window.display();
+	//}
 
-	BinarySearchTree b;
-	b.Insert(4);
-	b.Insert(5);
-	b.Insert(4);
-	b.Insert(5);
-	b.Insert(6);
-	b.Insert(4);
-	b.Insert(1);
-	b.Insert(3);
-	b.Insert(1);
-	b.Insert(3);
+	//BinarySearchTree b;
+	//b.Insert(4);
+	//b.Insert(5);
+	//b.Insert(4456);
+	//b.Insert(5);
+	//b.Insert(8);
+	//b.Insert(13);
+	//b.Insert(4432);
+	//b.Insert(513);
+	//b.Insert(63);
+	//b.Insert(4);
+	//b.Insert(1);
+	//b.Insert(313);
+	//b.Insert(154);
+	//b.Insert(3);
 
-	b.TraverseTree();
+	//cout << "Depth of tree is " << b.GetDepth() << endl;
+	//cout << "Pre-Order  :";
+	//b.TraverseTree(Trees::PREORDER);
+	//cout << "\nIn-Order   :";
+	//b.TraverseTree(Trees::INORDER);
+	//cout << "\nPost-Order :";
+	//b.TraverseTree(Trees::POSTORDER);
+	//cout << endl;
 
+
+
+	//Testing Generic BST
+	string SampleString = "1 + 3 / 1 - ( 3 + 3 ) * ( 4 / 9)";
+	GenericBST<char> gBST;
+	gBST.InsertString(SampleString);
+	gBST.TraverseTree(Trees::PREORDER);
 	return 0;
 }
 

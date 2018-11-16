@@ -1,21 +1,47 @@
 #include<thread>
 #include<iostream>
 #include<string>
-#include<filesystem>
-#include<string>
-#include "Stack.h"
-#include "MyDataTypes.h"
-#include<experimental\filesystem>
+#include<vector>
+#include<mutex>
 
 using namespace std;
-namespace fs = std::experimental::filesystem;
+
+__declspec(naked) unsigned get_current_proc()
+{
+	__asm
+	{
+		mov ecx, 03Bh
+		lsl eax, ecx
+		shr eax, 0Eh
+		retn
+	}
+}
 
 int main()
 {
-	string path("D");
-	for (auto & p : fs::directory_iterator(path))
-		cout << p << endl;
-	system("PAUSE");
+	const int nThreads = thread::hardware_concurrency();
+	vector<thread> vThreads(nThreads*2);
+	mutex lock;
+	for (unsigned int t = 0; t < nThreads*2; ++t)
+	{
+		vThreads[t] = thread([&lock, t]{
+		//	while (1)
+			{
+				{
+					lock_guard<mutex> iolock(lock);
+					cout << "Thread #" << t << ": on CPU " << get_current_proc() << endl;
+				}
+
+				//make your thread sleep for a while
+			//	cout << "\n\n";
+				this_thread::sleep_for(chrono::milliseconds(900));
+			}
+		});
+	}
+
+	for (auto& i : vThreads)
+		i.join();
+
 	return 0;
 }
 
@@ -24,36 +50,4 @@ int main()
 
 
 
-
-
-
-namespace StackMultiThreading {
-
-	Stack<Integer> myStack;
-
-	void consumer()
-	{
-		int val = myStack.pop();
-		cout << "I consumed this " << val << endl;
-	}
-
-	void producer(int i)
-	{
-		myStack.push(i);
-		cout << "I produced this " << i << endl;
-	}
-
-	void test1()
-	{
-//		thread t1(producer);
-//		thread t2(consumer);
-		for (int i = 1; i <= 10; ++i)
-		{
-
-		}
-//		t1.join();
-//		t2.join();
-
-	}
-}
 

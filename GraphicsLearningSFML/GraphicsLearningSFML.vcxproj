@@ -122,8 +122,12 @@
     <ClCompile Include="WindowLayout.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Constants.h" />
     <ClInclude Include="NodeLayout.h" />
     <ClInclude Include="WindowLayout.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

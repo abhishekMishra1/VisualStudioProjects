@@ -8,4 +8,16 @@ namespace Trees
 		INORDER,
 		POSTORDER
 	};
+
+	enum DataTypes
+	{
+		STRING,
+		CHARACTER,
+		INTEGER,
+		FLOAT,
+		OPERATORS,
+		BRACKETS,
+		SPACE,
+		INVALID
+	};
 }

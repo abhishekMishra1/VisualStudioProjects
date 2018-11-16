@@ -1,0 +1,4 @@
+﻿  Source.cpp
+d:\workspace\github\vs\visualstudioprojects\multithreading\multithreading\source.cpp(25): warning C4018: '<': signed/unsigned mismatch
+  MultiThreading.vcxproj -> D:\Workspace\GitHub\VS\VisualStudioProjects\MultiThreading\MultiThreading\Debug\MultiThreading.exe
+  MultiThreading.vcxproj -> D:\Workspace\GitHub\VS\VisualStudioProjects\MultiThreading\MultiThreading\Debug\MultiThreading.pdb (Partial PDB)

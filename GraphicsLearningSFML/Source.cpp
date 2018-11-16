@@ -3,8 +3,11 @@
 
 using namespace std;
 
+void test();
+
 int main()
 {
+	test();
 	return 0;
 }
 
@@ -15,7 +18,7 @@ void test()
 	//circle.setPosition(20, 20);
 	//circle.setPointCount(300);
 	sf::RectangleShape rect(sf::Vector2f(80, 80));
-
+	//rect.setSize(80)
 	sf::Font font;
 	if (!font.loadFromFile("OpenSans-Regular.ttf"))
 	{
@@ -23,7 +26,7 @@ void test()
 	}
 	sf::Text text;
 	text.setFont(font);
-	text.setString("TEsting");
+	text.setString("Testing");
 	//text.setColor(sf::Color::Blue);
 	text.setCharacterSize(40);
 	text.setFillColor(sf::Color::Blue);
@@ -59,6 +62,8 @@ void test()
 		}
 
 		window.clear();
+		window.draw(line1, 2, sf::Lines);
+		window.draw(line2, 2, sf::Lines);
 		window.display();
 	}
 }
