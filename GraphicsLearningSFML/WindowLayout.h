@@ -14,10 +14,20 @@ namespace GraphicalTree
 		~WindowLayout();
 		void update();
 		void RenderShapes();
+
 	protected:
-		sf::RenderWindow m_window;
+		sf::RenderWindow *m_pWindow;
 		int m_WindowHeight;
 		int m_WindowBreadth;
 		std::vector<GraphicalTree::NodeLayout> mvNodes;
+
+#ifdef DEBUG
+	public:
+		//Testing functions
+		void SetNumOfNodes(int n);
+
+	protected:
+		int m_nNodes;
+#endif // DEBUG
 	};
 }

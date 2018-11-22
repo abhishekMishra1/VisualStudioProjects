@@ -11,8 +11,12 @@ namespace GraphicalTree
 		NodeLayout(int windowLength, int windowHeigth);
 
 		~NodeLayout();
+		void DrawNode(sf::RenderWindow& window);
+
 	protected:
 		NodeLayout();
+		NodeLayout(int windowLength, int windowHeigth, int Circleoffset);
+		void createNodes();
 
 	protected:
 		struct windowDimensions
