@@ -1,0 +1,20 @@
+-- VERSION_5
+-- START DISKCACHE_2
+E:\WorkSpace\Eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\commandlinearguments\com.python.pydev.analysis\v2_indexcache
+product|1589079395710316700|E:\WorkSpace\Eclipse\commandlinearguments\product.py
+demo|1589079283126327200|E:\WorkSpace\Eclipse\commandlinearguments\demo.py
+-- END DISKCACHE
+-- START DICTIONARY
+4
+4=product
+3=E:\WorkSpace\Eclipse\commandlinearguments\product.py
+1=E:\WorkSpace\Eclipse\commandlinearguments\demo.py
+2=demo
+-- END DICTIONARY
+-- START TREE 1
+1
+lst|2|lst!1^2#1*19@lst!3^2#1*35@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

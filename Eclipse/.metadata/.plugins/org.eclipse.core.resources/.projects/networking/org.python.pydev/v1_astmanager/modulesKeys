@@ -1,0 +1,8 @@
+MODULES_MANAGER_V2
+downloadimage|E:\WorkSpace\Eclipse\networking\downloadimage.py
+emailclient|E:\WorkSpace\Eclipse\networking\emailclient.py
+fileclient|E:\WorkSpace\Eclipse\networking\fileclient.py
+fileserver|E:\WorkSpace\Eclipse\networking\fileserver.py
+tcpipclient|E:\WorkSpace\Eclipse\networking\tcpipclient.py
+tcpipserver|E:\WorkSpace\Eclipse\networking\tcpipserver.py
+urllibdemo|E:\WorkSpace\Eclipse\networking\urllibdemo.py

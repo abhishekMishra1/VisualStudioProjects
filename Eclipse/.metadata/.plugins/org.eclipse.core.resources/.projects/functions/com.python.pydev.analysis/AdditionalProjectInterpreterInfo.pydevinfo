@@ -1,0 +1,84 @@
+-- VERSION_5
+-- START DISKCACHE_2
+E:\WorkSpace\Eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\functions\com.python.pydev.analysis\v2_indexcache
+average|1589080868704153200|E:\WorkSpace\Eclipse\functions\average.py
+evenoroddfilter|1589168343646823400|E:\WorkSpace\Eclipse\functions\evenoroddfilter.py
+doubleusingmap|1589168859645961100|E:\WorkSpace\Eclipse\functions\doubleusingmap.py
+doubledecor|1589170253620648600|E:\WorkSpace\Eclipse\functions\doubledecor.py
+mymath|1589170953031498000|E:\WorkSpace\Eclipse\functions\mymath.py
+nestedfunctions|1589080247862824000|E:\WorkSpace\Eclipse\functions\nestedfunctions.py
+returnfunction|1589080527391559700|E:\WorkSpace\Eclipse\functions\returnfunction.py
+stringdecor|1589170533325110600|E:\WorkSpace\Eclipse\functions\stringdecor.py
+usesemodule|1589171105599756400|E:\WorkSpace\Eclipse\functions\usesemodule.py
+evenoroddlambda|1589130412048185700|E:\WorkSpace\Eclipse\functions\evenoroddlambda.py
+localandglobal|1589080107676460900|E:\WorkSpace\Eclipse\functions\localandglobal.py
+sumlambda|1589130518651672700|E:\WorkSpace\Eclipse\functions\sumlambda.py
+cubelambda|1589130212232786300|E:\WorkSpace\Eclipse\functions\cubelambda.py
+customgenerator|1589170813766427700|E:\WorkSpace\Eclipse\functions\customgenerator.py
+sumusingreduce|1589169273734266700|E:\WorkSpace\Eclipse\functions\sumusingreduce.py
+calc|1589079927193028400|E:\WorkSpace\Eclipse\functions\calc.py
+functionasparameter|1589080363335497500|E:\WorkSpace\Eclipse\functions\functionasparameter.py
+recursion|1589080706066986100|E:\WorkSpace\Eclipse\functions\recursion.py
+-- END DISKCACHE
+-- START DICTIONARY
+34
+5=E:\WorkSpace\Eclipse\functions\calc.py
+4=average
+28=evenoroddfilter
+13=E:\WorkSpace\Eclipse\functions\returnfunction.py
+32=doubleusingmap
+3=E:\WorkSpace\Eclipse\functions\average.py
+7=E:\WorkSpace\Eclipse\functions\customgenerator.py
+21=E:\WorkSpace\Eclipse\functions\cubelambda.py
+12=stringdecor
+26=evenoroddlambda
+9=E:\WorkSpace\Eclipse\functions\doubledecor.py
+20=localandglobal
+34=sumlambda
+23=E:\WorkSpace\Eclipse\functions\recursion.py
+25=E:\WorkSpace\Eclipse\functions\evenoroddlambda.py
+8=customgenerator
+30=sumusingreduce
+1=E:\WorkSpace\Eclipse\functions\mymath.py
+27=E:\WorkSpace\Eclipse\functions\evenoroddfilter.py
+24=recursion
+31=E:\WorkSpace\Eclipse\functions\doubleusingmap.py
+10=doubledecor
+15=E:\WorkSpace\Eclipse\functions\functionasparameter.py
+19=E:\WorkSpace\Eclipse\functions\localandglobal.py
+2=mymath
+18=nestedfunctions
+11=E:\WorkSpace\Eclipse\functions\stringdecor.py
+14=returnfunction
+29=E:\WorkSpace\Eclipse\functions\sumusingreduce.py
+17=E:\WorkSpace\Eclipse\functions\nestedfunctions.py
+22=cubelambda
+6=calc
+33=E:\WorkSpace\Eclipse\functions\sumlambda.py
+16=functionasparameter
+-- END DICTIONARY
+-- START TREE 1
+19
+add|1|add!1^7#5*18@
+ave|1|average!3^1#5*34@
+cal|1|calc!5^1#5*50@
+cus|1|customgen!7^1#5*66@
+dec|2|decor!9^7#5*82@decorfun!11^1#5*98@
+dif|1|diff!1^10#5*18@
+dis|4|display!13^1#5*114@display!15^1#5*130@display!17^1#5*146@display!19^3#5*162@
+f|1|f!21^1#1*179@
+fac|1|factorial!23^1#5*194@
+fun|1|fun!13^6#1*115@
+hel|1|hello!11^10#5*98@
+l|1|l!25^1#1*211@
+lst|3|lst!27^1#1*227@lst!29^3#1*243@lst!31^1#1*259@
+nam|1|name!15^4#5*130@
+num|1|num!9^14#5*82@
+res|7|result!31^2#1*259@result!5^8#1*51@result!7^6#1*67@result!3^5#1*35@resultfun!9^18#1*83@result!27^3#1*227@result!29^4#1*243@
+s|1|s!33^1#1*275@
+x|2|x!19^1#1*163@x!23^7#1*195@
+z|1|z!19^10#1*163@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

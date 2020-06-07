@@ -1,0 +1,28 @@
+-- VERSION_5
+-- START DISKCACHE_2
+E:\WorkSpace\Eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\basicprograms\com.python.pydev.analysis\v2_indexcache
+areaofacircle|1589032985300641800|E:\WorkSpace\Eclipse\basicprograms\areaofacircle.py
+averageofnumbers|1589032798184729700|E:\WorkSpace\Eclipse\basicprograms\averageofnumbers.py
+studentdetails|1589032647905686800|E:\WorkSpace\Eclipse\basicprograms\studentdetails.py
+-- END DISKCACHE
+-- START DICTIONARY
+6
+2=areaofacircle
+4=averageofnumbers
+3=E:\WorkSpace\Eclipse\basicprograms\averageofnumbers.py
+5=E:\WorkSpace\Eclipse\basicprograms\studentdetails.py
+1=E:\WorkSpace\Eclipse\basicprograms\areaofacircle.py
+6=studentdetails
+-- END DICTIONARY
+-- START TREE 1
+6
+are|1|area!1^5#1*19@
+ave|1|average!3^2#1*35@
+mar|1|marks!5^3#1*51@
+nam|1|name!5^2#1*51@
+r|1|r!1^3#1*19@
+stu|1|studentid!5^1#1*51@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

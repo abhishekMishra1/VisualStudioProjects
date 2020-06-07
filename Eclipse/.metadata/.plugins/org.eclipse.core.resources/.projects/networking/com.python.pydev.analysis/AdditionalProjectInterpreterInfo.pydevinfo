@@ -1,0 +1,46 @@
+-- VERSION_5
+-- START DISKCACHE_2
+E:\WorkSpace\Eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\networking\com.python.pydev.analysis\v2_indexcache
+tcpipclient|1589689158224852700|E:\WorkSpace\Eclipse\networking\tcpipclient.py
+urllibdemo|1589688071764743200|E:\WorkSpace\Eclipse\networking\urllibdemo.py
+fileserver|1589714462919966100|E:\WorkSpace\Eclipse\networking\fileserver.py
+tcpipserver|1589688979112817700|E:\WorkSpace\Eclipse\networking\tcpipserver.py
+emailclient|1589766588875734400|E:\WorkSpace\Eclipse\networking\emailclient.py
+downloadimage|1589688355082283300|E:\WorkSpace\Eclipse\networking\downloadimage.py
+fileclient|1589714775720374500|E:\WorkSpace\Eclipse\networking\fileclient.py
+-- END DISKCACHE
+-- START DICTIONARY
+14
+10=tcpipserver
+11=E:\WorkSpace\Eclipse\networking\tcpipclient.py
+6=urllibdemo
+12=tcpipclient
+8=fileserver
+1=E:\WorkSpace\Eclipse\networking\emailclient.py
+13=E:\WorkSpace\Eclipse\networking\downloadimage.py
+9=E:\WorkSpace\Eclipse\networking\tcpipserver.py
+2=emailclient
+5=E:\WorkSpace\Eclipse\networking\urllibdemo.py
+4=fileclient
+14=downloadimage
+7=E:\WorkSpace\Eclipse\networking\fileserver.py
+3=E:\WorkSpace\Eclipse\networking\fileclient.py
+-- END DICTIONARY
+-- START TREE 1
+12
+bod|1|body!1^4#1*19@
+con|3|content!3^10#1*35@content!5^5#5*51@content!7^18#5*67@
+f|2|f!5^11#1*51@f!7^17#5*67@
+fil|2|fileName!7^14#1*67@fileName!3^7#1*35@
+hos|2|host!7^3#1*67@host!9^3#1*83@
+msg|2|msg!11^7#1*99@msg!1^6#1*19@
+pas|1|password!1^27#13*19@
+por|2|port!7^4#1*67@port!9^4#1*83@
+s|4|s!7^6#1*67@s!3^3#1*35@s!9^6#1*83@s!11^3#1*99@
+ser|1|server!1^12#5*19@
+url|2|url!5^4#5*51@url!13^3#1*115@
+use|1|username!1^26#13*19@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

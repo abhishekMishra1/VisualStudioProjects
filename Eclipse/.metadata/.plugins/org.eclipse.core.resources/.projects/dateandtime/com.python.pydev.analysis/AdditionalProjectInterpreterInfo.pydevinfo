@@ -1,0 +1,23 @@
+-- VERSION_5
+-- START DISKCACHE_2
+E:\WorkSpace\Eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\dateandtime\com.python.pydev.analysis\v2_indexcache
+combinedateandtime|1589645938717972700|E:\WorkSpace\Eclipse\dateandtime\combinedateandtime.py
+dtdemo|1589645853926870400|E:\WorkSpace\Eclipse\dateandtime\dtdemo.py
+-- END DISKCACHE
+-- START DICTIONARY
+4
+1=E:\WorkSpace\Eclipse\dateandtime\combinedateandtime.py
+2=combinedateandtime
+4=dtdemo
+3=E:\WorkSpace\Eclipse\dateandtime\dtdemo.py
+-- END DICTIONARY
+-- START TREE 1
+4
+d|1|d!1^4#1*19@
+dt|2|dt!1^7#1*19@dt!3^9#1*35@
+epo|1|epochsec!3^3#1*35@
+t|2|t!1^5#1*19@t!3^6#1*35@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

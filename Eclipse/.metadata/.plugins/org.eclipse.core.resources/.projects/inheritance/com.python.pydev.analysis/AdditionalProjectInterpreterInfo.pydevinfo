@@ -1,0 +1,48 @@
+-- VERSION_5
+-- START DISKCACHE_2
+E:\WorkSpace\Eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\inheritance\com.python.pydev.analysis\v2_indexcache
+bmw|1589430453575904100|E:\WorkSpace\Eclipse\inheritance\bmw.py
+laptops|1589558554493170100|E:\WorkSpace\Eclipse\inheritance\laptops.py
+-- END DISKCACHE
+-- START DICTIONARY
+15
+15=Dell
+3=E:\WorkSpace\Eclipse\inheritance\bmw.py
+7=FiveSeries
+8=TouchScreenLaptop
+14=HP
+9=HPNotebook
+11=ThreeSeries.__init__
+4=bmw
+5=BMW
+12=BMW.__init__
+6=ThreeSeries
+10=DellNotebook
+1=E:\WorkSpace\Eclipse\inheritance\laptops.py
+13=FiveSeries.__init__
+2=laptops
+-- END DICTIONARY
+-- START TREE 1
+7
+HP|1|HP!1^13#7*17@
+bmw|1|BMW!3^3#7*33@
+del|3|dellnotebook!1^36#1*19@Dell!1^19#7*17@DellNotebook!1^29#7*17@
+fiv|2|FiveSeries!3^52#1*35@FiveSeries!3^33#7*33@
+hpn|2|HPNotebook!1^24#7*17@hpnotebook!1^35#1*19@
+thr|2|ThreeSeries!3^19#7*33@ThreeSeries!3^41#1*35@
+tou|1|TouchScreenLaptop!1^3#7*17@
+-- END TREE
+-- START TREE 2
+11
+__i|3|__init__!5&3^4#9*34@__init__!6&3^20#9*34@__init__!7&3^34#9*34@
+cli|3|click!8&1^10#9*18@click!9&1^26#9*18@click!10&1^31#9*18@
+cru|1|cruiseControlEnabled!11&3^22#9*35@
+dri|3|drive!5&3^15#9*34@drive!6&3^28#9*34@drive!7&3^38#9*34@
+mak|1|make!12&3^5#9*35@
+mod|1|model!12&3^6#9*35@
+par|1|parkingAssistEnabled!13&3^36#9*35@
+scr|3|scroll!8&1^6#9*18@scroll!14&1^15#9*18@scroll!15&1^21#9*18@
+sta|2|start!5&3^9#9*34@start!6&3^24#9*34@
+sto|1|stop!5&3^11#9*34@
+yea|1|year!12&3^7#9*35@
+-- END TREE

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pydev-testrun version="1.0"?><pydev-testsuite>
+    <summary errors="1" failures="0" finished="true" name="Test Run: 4" tests="0" total_time="null"/>
+    <test location="E:/WorkSpace/Eclipse/exceptionhandling/demo.py" status="error" test="demo" time="0">
+        <stdout/>
+        <stderr><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Home\.p2\pool\plugins\org.python.pydev.core_7.5.0.202001101138\pysrc\_pydev_runfiles\pydev_runfiles.py", line 468, in __get_module_from_str
+    mod = __import__(modname)
+  File "E:\WorkSpace\Eclipse\exceptionhandling\demo.py", line 1, in <module>
+    a,b = [int(x) for x in input("Enter 2 numbers:").split()]
+  File "C:\Users\Home\.p2\pool\plugins\org.python.pydev.core_7.5.0.202001101138\pysrc\pydev_sitecustomize\sitecustomize.py", line 199, in input
+    ret = original_input(prompt)
+EOFError: EOF when reading a line
+ERROR: Module: demo could not be imported (file: E:/WorkSpace/Eclipse/exceptionhandling/demo.py).
+]]></stderr>
+    </test>
+    <launch mode="run">
+        <launch_memento><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration local="true" path="exceptionhandling exceptionhandling"/>
+]]></launch_memento>
+    </launch>
+</pydev-testsuite>

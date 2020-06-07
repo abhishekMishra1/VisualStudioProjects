@@ -1,0 +1,4 @@
+MODULES_MANAGER_V2
+createEmp|E:\WorkSpace\Eclipse\dboperations\createEmp.py
+deleteEmp|E:\WorkSpace\Eclipse\dboperations\deleteEmp.py
+readEmp|E:\WorkSpace\Eclipse\dboperations\readEmp.py

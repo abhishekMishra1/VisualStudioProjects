@@ -1,0 +1,27 @@
+-- VERSION_5
+-- START DISKCACHE_2
+E:\WorkSpace\Eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\dboperations\com.python.pydev.analysis\v2_indexcache
+deleteEmp|1589821836055751700|E:\WorkSpace\Eclipse\dboperations\deleteEmp.py
+createEmp|1589821339416450200|E:\WorkSpace\Eclipse\dboperations\createEmp.py
+readEmp|1589821008711723800|E:\WorkSpace\Eclipse\dboperations\readEmp.py
+-- END DISKCACHE
+-- START DICTIONARY
+6
+3=E:\WorkSpace\Eclipse\dboperations\readEmp.py
+6=deleteEmp
+2=createEmp
+1=E:\WorkSpace\Eclipse\dboperations\createEmp.py
+4=readEmp
+5=E:\WorkSpace\Eclipse\dboperations\deleteEmp.py
+-- END DICTIONARY
+-- START TREE 1
+5
+con|2|conn!1^2#1*19@conn!3^2#1*35@
+cur|2|cursor!1^6#1*19@cursor!3^6#1*35@
+del|1|deleteRecord!5^3#5*50@
+emp|1|empId!5^21#1*51@
+row|1|rows!3^15#1*35@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

@@ -1,0 +1,54 @@
+-- VERSION_5
+-- START DISKCACHE_2
+E:\WorkSpace\Eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\basics\com.python.pydev.analysis\v2_indexcache
+assignment2|1588913608368729900|E:\WorkSpace\Eclipse\basics\assignment2.py
+dataTypes|1588910623084949700|E:\WorkSpace\Eclipse\basics\dataTypes.py
+stringOperation|1588875215420827000|E:\WorkSpace\Eclipse\basics\stringOperation.py
+settype|1588912343107931800|E:\WorkSpace\Eclipse\basics\settype.py
+tupletype|1588911902726228200|E:\WorkSpace\Eclipse\basics\tupletype.py
+bytesAndArrays|1588912754052495900|E:\WorkSpace\Eclipse\basics\bytesAndArrays.py
+rangetype|1588912449205131600|E:\WorkSpace\Eclipse\basics\rangetype.py
+hello|1588873257678011500|E:\WorkSpace\Eclipse\basics\hello.py
+listtype|1588911308971546400|E:\WorkSpace\Eclipse\basics\listtype.py
+dicttype|1588913024581469500|E:\WorkSpace\Eclipse\basics\dicttype.py
+-- END DISKCACHE
+-- START DICTIONARY
+18
+10=assignment2
+8=settype
+4=bytesAndArrays
+5=E:\WorkSpace\Eclipse\basics\dicttype.py
+11=E:\WorkSpace\Eclipse\basics\tupletype.py
+9=E:\WorkSpace\Eclipse\basics\assignment2.py
+13=E:\WorkSpace\Eclipse\basics\listtype.py
+17=E:\WorkSpace\Eclipse\basics\stringOperation.py
+2=dataTypes
+18=stringOperation
+12=tupletype
+15=E:\WorkSpace\Eclipse\basics\rangetype.py
+16=rangetype
+3=E:\WorkSpace\Eclipse\basics\bytesAndArrays.py
+7=E:\WorkSpace\Eclipse\basics\settype.py
+14=listtype
+6=dicttype
+1=E:\WorkSpace\Eclipse\basics\dataTypes.py
+-- END DICTIONARY
+-- START TREE 1
+13
+a|1|a!1^1#1*19@
+b|2|b!1^2#1*19@b!3^4#1*35@
+b1|1|b1!3^9#1*35@
+c|1|c!1^3#1*19@
+d|1|d!1^4#1*19@
+dic|1|dict1!5^1#1*51@
+f|1|f!7^14#1*67@
+k|1|k!5^6#1*51@
+lst|4|lstCountries!9^1#1*83@lst!11^8#1*99@lst!13^1#1*115@lst!3^1#1*35@
+r|1|r!15^1#1*131@
+s|2|s!7^1#1*67@s!17^1#1*147@
+set|1|setCountries!9^13#1*83@
+tpl|2|tpl!11^1#1*99@tpl1!11^9#1*99@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

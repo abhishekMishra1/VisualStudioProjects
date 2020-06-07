@@ -1,0 +1,32 @@
+-- VERSION_5
+-- START DISKCACHE_2
+E:\WorkSpace\Eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\exceptionhandling\com.python.pydev.analysis\v2_indexcache
+assertdemo|1589560462076933200|E:\WorkSpace\Eclipse\exceptionhandling\assertdemo.py
+loggingdemo|1589560137694347900|E:\WorkSpace\Eclipse\exceptionhandling\loggingdemo.py
+demo|1589560175695109700|E:\WorkSpace\Eclipse\exceptionhandling\demo.py
+authentication|1589633612417540700|E:\WorkSpace\Eclipse\exceptionhandling\authentication.py
+-- END DISKCACHE
+-- START DICTIONARY
+8
+5=E:\WorkSpace\Eclipse\exceptionhandling\assertdemo.py
+6=assertdemo
+3=E:\WorkSpace\Eclipse\exceptionhandling\authentication.py
+8=InvalidPasswordException.__init__
+1=E:\WorkSpace\Eclipse\exceptionhandling\demo.py
+7=InvalidPasswordException
+2=demo
+4=authentication
+-- END DICTIONARY
+-- START TREE 1
+5
+c|1|c!1^9#5*19@
+f|1|f!1^8#5*19@
+inv|1|InvalidPasswordException!3^1#7*33@
+num|1|num!5^2#5*51@
+pas|1|password!3^6#5*35@
+-- END TREE
+-- START TREE 2
+2
+__i|1|__init__!7&3^2#9*34@
+err|1|errorMsg!8&3^3#9*35@
+-- END TREE
