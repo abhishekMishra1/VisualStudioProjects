@@ -33,12 +33,20 @@ namespace BinarySearchTree {
         bool deleteElement(T& val);
         void traverseBST();
         bool treeCreated();
+        unsigned int depth();
+        unsigned int siblings();
+        NODES::BstNode<T>* GetRootNode(NODES::BstNode<T>* p);
+        void GetRootNode(NODES::BstNode<T>* pNode, NODES::BstNode<T>* pLeftChild, NODES::BstNode<T>* pRightChild);
+
 
     protected:
         void traverseInOrder(NODES::BstNode<T>* root);
         void traversPreOrder(NODES::BstNode<T>* root);
         void traversePostOrder(NODES::BstNode<T>* root);
         bool insertElement(NODES::BstNode<T>* head, const T& val);
+
+    private:
+        unsigned int m_Depth = 0;
     };
 
 
@@ -128,6 +136,11 @@ namespace BinarySearchTree {
     bool BST<T>::deleteElement(NODES::BstNode<T>* p)
     {
         LOGINFO(__FUNCTION__);
+        NODES::BstNode<T>* tempNode = m_pHead;
+        if (m_pHead == p && m_pHead->m_Data == p->m_Data)
+        {
+
+        }
     }
 
     template<typename T>
@@ -185,7 +198,10 @@ namespace BinarySearchTree {
         if (root->m_Data > val)
         {
             if (root->m_pLeft)
+            {
+                m_Depth++;
                 insertElement(root->m_pLeft, val);
+            }
             else
             {
                 root->m_pLeft = new NODES::BstNode<T>;
@@ -196,7 +212,10 @@ namespace BinarySearchTree {
         else
         {
             if (root->m_pRight)
+            {
+                m_Depth++;
                 insertElement(root->m_pRight, val);
+            }
             else
             {
                 root->m_pRight = new NODES::BstNode<T>;
@@ -206,4 +225,27 @@ namespace BinarySearchTree {
         }
         return ret;
     }
+
+    template<typename T>
+    unsigned int BST<T>::depth()
+    {
+        LOGINFO(__FUNCTION__);
+        return m_Depth;
+    }
+
+    template<typename T>
+    unsigned int BST<T>::siblings()
+    {
+    }
+
+    template<typename T>
+    NODES::BstNode<T>* BST<T>::GetRootNode(NODES::BstNode<T>* p)
+    {
+    }
+
+    template<typename T>
+    void BST<T>::GetRootNode(NODES::BstNode<T>* pNode, NODES::BstNode<T>* pLeftChild, NODES::BstNode<T>* pRightChild)
+    {
+    }
+
 }

@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BST.h" />
+    <ClInclude Include="MyDS.h" />
     <ClInclude Include="Nodes.h" />
   </ItemGroup>
   <ItemGroup>

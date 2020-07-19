@@ -1,16 +1,21 @@
 #pragma once
 //#include <mutex>
-#include "Nodes.h"
 #include <iostream>
 
-namespace SLL
+namespace MyDS
 {
+	template <typename T>
+	struct Node
+	{
+		T* m_pData = nullptr;
+		Node* m_pNext = nullptr;
+	};
 
 	template <class T>
 	class sList
 	{
-		NODES::SSListNode<T>* m_pHead = nullptr;
-		NODES::SSListNode<T>* m_pCurrentNode = nullptr;
+		Node<T>* m_pHead = nullptr;
+		Node<T>* m_pCurrentNode = nullptr;
 		int m_Size = 0;
 		//std::mutex m_ListMutex;
 
@@ -32,11 +37,11 @@ namespace SLL
 		int getSize();
 
 	private:
-		void traverse_reverse(NODES::SSListNode<T>* pNode);
+		void traverse_reverse(Node<T>* pNode);
 	};
 
 	template<typename T>
-	void sList<T>::traverse_reverse(NODES::SSListNode<T>* pNode)
+	void sList<T>::traverse_reverse(Node<T>* pNode)
 	{
 		if (pNode->m_pNext != nullptr)
 			traverse_reverse(pNode->m_pNext);
@@ -51,7 +56,7 @@ namespace SLL
 		{
 			//std::lock_guard<std::mutex> lg(m_ListMutex);
 
-			NODES::SSListNode<T>* pTempNode = m_pHead, pTempNode1 = nullptr;
+			Node<T>* pTempNode = m_pHead, pTempNode1 = nullptr;
 			while (pTempNode->m_pNext!= nullptr)
 			{
 				pTempNode1 = pTempNode->m_pNext;
@@ -82,7 +87,7 @@ namespace SLL
 	template<typename T>
 	bool sList<T>::insert_front(T val)
 	{
-		NODES::SSListNode<T>* pNode = new NODES::SSListNode<T>;
+		Node<T>* pNode = new Node<T>;
 		pNode->m_pData = new T(val);
 
 		if (getSize() > 0)
@@ -100,11 +105,11 @@ namespace SLL
 	template<typename T>
 	bool sList<T>::insert_last(T val)
 	{
-		NODES::SSListNode<T>* plastNode = m_pHead;
+		Node<T>* plastNode = m_pHead;
 		while (plastNode->m_pNext!= nullptr)
 			plastNode = plastNode->m_pNext;
 
-		plastNode->m_pNext = new NODES::SSListNode<T>;
+		plastNode->m_pNext = new Node<T>;
 		plastNode->m_pNext->m_pData = new T(val);
 
 		return true;
@@ -129,7 +134,7 @@ namespace SLL
 	bool sList<T>::remove_front()
 	{
 		//std::lock_guard<std::mutex> lg(m_ListMutex);
-		NODES::SSListNode<T>* pNode = m_pHead;
+		Node<T>* pNode = m_pHead;
 		m_pHead = m_pHead->m_pNext;
 
 		delete pNode->m_pData;
@@ -142,14 +147,14 @@ namespace SLL
 	template<typename T>
 	bool sList<T>::remove_last()
 	{
-		NODES::SSListNode<T>* plastNode = m_pHead;
+		Node<T>* plastNode = m_pHead;
 		//std::lock_guard<std::mutex> lg(m_ListMutex);
 		if (getSize() > 1)
 		{
 			while (plastNode->m_pNext->m_pNext != nullptr)
 				plastNode = plastNode->m_pNext;
 
-			NODES::SSListNode<T>* pNode = plastNode->m_pNext;
+			Node<T>* pNode = plastNode->m_pNext;
 			plastNode->m_pNext = nullptr;
 
 			delete pNode->m_pData;
@@ -178,8 +183,8 @@ namespace SLL
 	bool sList<T>::remove(T val)
 	{
 		bool ret = false;
-		NODES::SSListNode<T>* pNode = m_pHead;
-		NODES::SSListNode<T>* pNodeNext = pNode->m_pNext;
+		Node<T>* pNode = m_pHead;
+		Node<T>* pNodeNext = pNode->m_pNext;
 
 		if (pNode->m_pData == val)
 		{

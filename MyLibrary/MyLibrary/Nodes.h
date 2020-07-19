@@ -9,4 +9,11 @@ namespace NODES
 		BstNode* m_pRight = nullptr;
 		T m_Data;
 	};
+
+	template <typename T>
+	struct SSListNode
+	{
+		T* m_pData = nullptr;
+		SSListNode* m_pNext = nullptr;
+	};
 }
