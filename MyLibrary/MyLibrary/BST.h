@@ -79,15 +79,28 @@ namespace BinarySearchTree {
     template<typename T>
     bool BST<T>::insertElement(const NODES::BstNode<T>* p)
     {
+        bool ret = false;
         LOGINFO(__FUNCTION__);
         if (treeCreated())
         {
             NODES::BstNode<T>* tempNode = m_pHead;
             if (tempNode->m_Data > p->m_Data)
             {
-                insertElement(tempNode->m_pLeft, p->m_Data);
+                ret = insertElement(tempNode->m_pLeft, p->m_Data);
+            }
+            else
+            {
+                ret = insertElement(tempNode->m_pRight, p->m_Data);
             }
         }
+        else
+        {
+            m_pHead = new NODES::BstNode<T>;
+            m_pHead->m_Data = data;
+            ret = true;
+        }
+
+        return ret;
     }
 
     template<typename T>

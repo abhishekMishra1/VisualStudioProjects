@@ -9,8 +9,8 @@ int main()
 
 	for (int i = 10; i > 0; --i) 
 	{
-		int value = distribution(generator);
-		myBst.insertElement(value);
+		//int value = distribution(generator);
+		myBst.insertElement(i);
 	}
 
 	myBst.traverseBST();
