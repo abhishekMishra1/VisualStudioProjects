@@ -1,6 +1,7 @@
 #include "Game.h"
 #include <iostream>
 #include "ChessBoard.h"
+#include "PseudoUI.h"
 
 namespace ChessGame
 {
@@ -13,7 +14,7 @@ namespace ChessGame
 		//Create and initialize players
 		m_pPlayerl = new Player("P1", CharacterType::WHITE);
 		m_pPlayer2 = new Player("P2", CharacterType::BLACK);
-
+		PseudoUI::DisplayBoard(board);
 		std::cout << "Game launched!\n";
 	}
 

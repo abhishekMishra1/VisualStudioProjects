@@ -32,6 +32,7 @@
     <ClInclude Include="source\include\MovesCalculator.h" />
     <ClInclude Include="source\include\Player.h" />
     <ClInclude Include="source\include\Predictor.h" />
+    <ClInclude Include="source\include\PseudoUI.h" />
     <ClInclude Include="source\include\Queen.h" />
     <ClInclude Include="source\include\Rules.h" />
     <ClInclude Include="source\include\Soldier.h" />
@@ -50,6 +51,7 @@
     <ClCompile Include="source\src\MovesCalculator.cpp" />
     <ClCompile Include="source\src\Player.cpp" />
     <ClCompile Include="source\src\Predictor.cpp" />
+    <ClCompile Include="source\src\PseudoUI.cpp" />
     <ClCompile Include="source\src\Queen.cpp" />
     <ClCompile Include="source\src\Rules.cpp" />
     <ClCompile Include="source\src\Soldier.cpp" />

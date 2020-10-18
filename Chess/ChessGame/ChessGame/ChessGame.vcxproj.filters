@@ -25,6 +25,9 @@
     <Filter Include="Source Files\Game">
       <UniqueIdentifier>{83185808-1b51-4da0-b383-4ceafeb7dd4e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="PseudoUI">
+      <UniqueIdentifier>{34c66401-450c-4341-b75f-0db092b1b5db}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\include\CommonTypes.h">
@@ -75,6 +78,9 @@
     <ClInclude Include="source\include\MovesCalculator.h">
       <Filter>Source Files\Brain</Filter>
     </ClInclude>
+    <ClInclude Include="source\include\PseudoUI.h">
+      <Filter>PseudoUI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\src\Player.cpp">
@@ -124,6 +130,9 @@
     </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\src\PseudoUI.cpp">
+      <Filter>PseudoUI</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
